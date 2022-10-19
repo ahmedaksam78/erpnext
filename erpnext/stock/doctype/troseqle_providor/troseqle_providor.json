@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:troseqle_driver",
+ "creation": "2022-10-13 13:57:25.921959",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "troseqle_providor",
+  "troseqle_driver",
+  "troseqle_traffic_number",
+  "column_break_4",
+  "troseqle_contact_number",
+  "troseqle_contact_addresse"
+ ],
+ "fields": [
+  {
+   "fieldname": "troseqle_providor",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Troseqle Providor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "troseqle_driver",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Troseqle Driver",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "troseqle_traffic_number",
+   "fieldtype": "Data",
+   "label": "Troseqle Traffic Number"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "troseqle_contact_number",
+   "fieldtype": "Data",
+   "label": "Troseqle Contact Number "
+  },
+  {
+   "fieldname": "troseqle_contact_addresse",
+   "fieldtype": "Data",
+   "label": "Troseqle Contact Addresse "
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-10-13 13:59:09.761551",
+ "modified_by": "Administrator",
+ "module": "Stock",
+ "name": "Troseqle Providor",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

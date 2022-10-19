@@ -1,0 +1,37 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2022-10-11 11:21:19.007526",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "Letter Head Name Ahmed",
+ "modified": "2022-10-12 10:30:58.498196",
+ "modified_by": "Administrator",
+ "module": "Accounts",
+ "name": "Purchase Invoice Ahmed Query Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT \nnaming_series as \"ID\",\nsupplier_name as \"Supplier Name\",\nstatus as \"Status\",\ngrand_total as  \"Grand Total\", \noutstanding_amount as \"Outstanding Amount\" ,\nposting_date as \"Date\",\ndue_date as \"Due Date\"\nFROM `tabPurchase Invoice`",
+ "ref_doctype": "Purchase Invoice",
+ "report_name": "Purchase Invoice Ahmed Query Report",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Purchase User"
+  },
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "Auditor"
+  }
+ ]
+}

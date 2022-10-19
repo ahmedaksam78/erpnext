@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "EX-SH-.#########",
+ "creation": "2022-10-16 10:25:39.585662",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "shipment_name",
+  "shipment_car",
+  "shipment_status",
+  "column_break_4",
+  "shipment_date",
+  "shipment_driver",
+  "traffic_line",
+  "shipments_details_section",
+  "shipments_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "shipment_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": " Shipment Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shipment_car",
+   "fieldtype": "Link",
+   "label": "Shipment Car",
+   "options": "Car"
+  },
+  {
+   "fieldname": "shipment_status",
+   "fieldtype": "Select",
+   "label": "Shipment Status",
+   "options": "\nReady To Ship\nShipped\nDelivered To Customer\nRejected From Customer"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shipment_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Shipment Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shipment_driver",
+   "fieldtype": "Link",
+   "label": "Shipment Driver",
+   "options": "Driver"
+  },
+  {
+   "fieldname": "traffic_line",
+   "fieldtype": "Data",
+   "label": "Traffic Line"
+  },
+  {
+   "fieldname": "shipments_details",
+   "fieldtype": "Table",
+   "label": "Shipments Details",
+   "options": "Shipments Details"
+  },
+  {
+   "fieldname": "shipments_details_section",
+   "fieldtype": "Section Break",
+   "label": "Shipments Orders"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-10-16 14:49:33.229982",
+ "modified_by": "Administrator",
+ "module": "Shipping And Transportation",
+ "name": "External Shipment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

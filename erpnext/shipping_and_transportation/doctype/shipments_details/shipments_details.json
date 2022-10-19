@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-10-16 10:39:17.978529",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sales_order",
+  "customer",
+  "shipping_charges",
+  "sales_order_grand_total",
+  "customer_shipment",
+  "delivery_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sales Order",
+   "options": "Sales Order",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "sales_order.customer_name",
+   "fieldname": "customer",
+   "fieldtype": "Data",
+   "label": "Customer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "shipping_charges",
+   "fieldtype": "Int",
+   "label": "Shipping charges"
+  },
+  {
+   "fetch_from": "sales_order.total",
+   "fieldname": "sales_order_grand_total",
+   "fieldtype": "Data",
+   "label": "Sales Order Grand Total"
+  },
+  {
+   "fetch_from": "sales_order.delivery_date",
+   "fieldname": "delivery_date",
+   "fieldtype": "Date",
+   "label": "Delivery Date"
+  },
+  {
+   "fieldname": "customer_shipment",
+   "fieldtype": "Link",
+   "label": "Customer Shipment",
+   "options": "Customer Shipment"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-10-16 14:55:14.353558",
+ "modified_by": "Administrator",
+ "module": "Shipping And Transportation",
+ "name": "Shipments Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
