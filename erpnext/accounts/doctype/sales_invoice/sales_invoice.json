@@ -22,6 +22,7 @@
   "company",
   "company_tax_id",
   "posting_date",
+  "delivery_date",
   "posting_time",
   "set_posting_time",
   "due_date",
@@ -2033,6 +2034,12 @@
    "fieldname": "is_cash_or_non_trade_discount",
    "fieldtype": "Check",
    "label": "Is Cash or Non Trade Discount"
+  },
+  {
+   "fetch_from": "sales_order.delivery_date",
+   "fieldname": "delivery_date",
+   "fieldtype": "Date",
+   "label": "Delivery Date"
   }
  ],
  "icon": "fa fa-file-text",
@@ -2045,12 +2052,11 @@
    "link_fieldname": "consolidated_invoice"
   }
  ],
- "modified": "2022-09-16 17:44:22.227332",
+ "modified": "2022-10-20 16:29:03.193995",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Sales Invoice",
  "name_case": "Title Case",
- "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -2096,7 +2102,6 @@
  "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
  "timeline_field": "customer",
  "title_field": "title",
  "track_changes": 1,

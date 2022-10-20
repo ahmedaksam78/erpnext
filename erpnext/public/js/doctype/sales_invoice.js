@@ -8,7 +8,10 @@ frappe.ui.form.on('Sales Invoice', {
 			method :'erpnext.api.get_sales_invoice',
 			args :  {name:"ACC-SINV-2022-00001"}   ,
 			callback : function(r){
-				console.log(r);
+
+				let items = r.message.items;
+				console.log(items);
+
 			}
 		})
 	}

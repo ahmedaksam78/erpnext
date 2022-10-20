@@ -26,7 +26,7 @@ doctype_js = {
 	"Newsletter": "public/js/newsletter.js",
 	"Contact": "public/js/contact.js",
 	"Sales Invoice": "public/js/doctype/sales_invoice.js",
-	"Customer Shipment": "shipping_and_transportation/doctype/customer_shipment/customer_shipment.js",
+	# "Customer Shipment": "shipping_and_transportation/doctype/customer_shipment/customer_shipment.js",
 }
 
 override_doctype_class = {"Address": "erpnext.accounts.custom.address.ERPNextAddress"}
