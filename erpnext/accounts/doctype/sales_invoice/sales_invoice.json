@@ -9,6 +9,7 @@
   "customer_section",
   "title",
   "naming_series",
+  "sales_order",
   "customer",
   "customer_name",
   "tax_id",
@@ -2037,9 +2038,17 @@
   },
   {
    "fetch_from": "sales_order.delivery_date",
+   "fetch_if_empty": 1,
    "fieldname": "delivery_date",
    "fieldtype": "Date",
    "label": "Delivery Date"
+  },
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "label": "Sales Order",
+   "options": "Sales Order",
+   "reqd": 1
   }
  ],
  "icon": "fa fa-file-text",
@@ -2052,7 +2061,7 @@
    "link_fieldname": "consolidated_invoice"
   }
  ],
- "modified": "2022-10-20 16:29:03.193995",
+ "modified": "2022-10-20 17:18:14.090037",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Sales Invoice",

@@ -249,20 +249,20 @@ def get_report_summary(data):
 	return [
 		{
 			'value': Draft,
-			'indicator': 'Red',
+			'indicator': "grey",
 			'label': 'Draft',
 			'datatype': 'Int',
 		},
 		{
 			'value': Return,
-			'indicator': 'red',
+			'indicator':"gray",
 			'label': 'Return',
 			'datatype': 'Int',
 		}
 		,
 		{
 			'value': Debit_Note_Issued,
-			'indicator': 'Red',
+			'indicator':"gray",
 			'label': 'Debit Note Issued',
 			'datatype': 'Int',
 		}
@@ -283,14 +283,14 @@ def get_report_summary(data):
 		,
 		{
 			'value': Partly_Paid,
-			'indicator': 'green',
+			'indicator': "yellow",
 			'label': 'Partly Paid',
 			'datatype': 'Int',
 		}
 		,
 		{
 			'value': Unpaid,
-			'indicator': 'green',
+			'indicator': "orange",
 			'label': 'Unpaid',
 			'datatype': 'Int',
 		}
@@ -311,10 +311,19 @@ def get_report_summary(data):
 		,
 		{
 			'value': Internal_Transfer,
-			'indicator': 'Red',
+			'indicator': "darkgrey",
 			'label': 'Internal Transfer',
 			'datatype': 'Int',
 		}
 	]
-
+const status_colors = {
+			
+			
+			
+			
+			
+			
+			
+			
+		
 
