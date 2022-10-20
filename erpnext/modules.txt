@@ -27,3 +27,5 @@ Loan Management
 Payroll
 Telephony
 E-commerce
+Shipping And Transportation
+Catalog Management
