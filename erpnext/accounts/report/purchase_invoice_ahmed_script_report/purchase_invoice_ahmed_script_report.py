@@ -316,7 +316,7 @@ def get_report_summary(data):
 			'datatype': 'Int',
 		}
 	]
-const status_colors = {
+
 			
 			
 			
