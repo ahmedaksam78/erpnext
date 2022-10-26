@@ -2037,7 +2037,6 @@
    "label": "Is Cash or Non Trade Discount"
   },
   {
-   "fetch_from": "sales_order.delivery_date",
    "fetch_if_empty": 1,
    "fieldname": "delivery_date",
    "fieldtype": "Date",
@@ -2059,9 +2058,14 @@
    "group": "Reference",
    "link_doctype": "POS Invoice",
    "link_fieldname": "consolidated_invoice"
+  },
+  {
+   "group": "Shipping",
+   "link_doctype": "Customer Shipment",
+   "link_fieldname": "sales_order"
   }
  ],
- "modified": "2022-10-20 17:18:14.090037",
+ "modified": "2022-10-25 13:04:31.720445",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Sales Invoice",

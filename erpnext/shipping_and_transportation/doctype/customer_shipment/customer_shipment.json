@@ -1,17 +1,18 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "CU-SH-.#########",
+ "autoname": "field:customer",
  "creation": "2022-10-16 11:23:12.010344",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "sales_invoice",
-  "customer_shipment_status",
-  "customer",
-  "column_break_4",
   "shipment_date",
+  "customer",
+  "shipping_charges",
+  "column_break_4",
+  "customer_shipment_status",
   "customer_phone",
   "customer_address",
   "section_break_8",
@@ -39,22 +40,17 @@
   {
    "fetch_from": "sales_invoice.customer_name",
    "fieldname": "customer",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Customer",
-   "read_only": 1
+   "options": "Customer",
+   "read_only": 1,
+   "unique": 1
   },
   {
    "fetch_from": "sales_invoice.contact_mobile",
    "fieldname": "customer_phone",
    "fieldtype": "Data",
    "label": "Customer Phone",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "sales_invoice.address_display",
-   "fieldname": "customer_address",
-   "fieldtype": "Data",
-   "label": "Customer Address",
    "read_only": 1
   },
   {
@@ -66,9 +62,11 @@
    "fieldname": "items",
    "fieldtype": "Table",
    "label": "Items",
-   "options": "Sales Order Items View"
+   "options": "Sales Order Items View",
+   "read_only": 1
   },
   {
+   "fetch_from": "sales_order.sales_invoice",
    "fieldname": "sales_invoice",
    "fieldtype": "Link",
    "label": "Sales Invoice",
@@ -83,12 +81,23 @@
    "options": "Customer Shipment",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "shipping_charges",
+   "fieldtype": "Currency",
+   "label": "Shipping charges"
+  },
+  {
+   "fieldname": "customer_address",
+   "fieldtype": "Text",
+   "label": "Customer Address",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-10-20 15:59:21.077712",
+ "modified": "2022-10-26 13:18:37.320210",
  "modified_by": "Administrator",
  "module": "Shipping And Transportation",
  "name": "Customer Shipment",

@@ -13,3 +13,14 @@ def get_sales_invoice(name) :
     return doc
     
     
+@frappe.whitelist()
+def get_sales_order(name) :
+ 
+    try :
+        doc = frappe.get_doc("Sales Order",name) 
+    except Exception as e :
+        doc = None
+        frappe.throw(_("Doctype Not Found")) 
+    return doc
+    
+    

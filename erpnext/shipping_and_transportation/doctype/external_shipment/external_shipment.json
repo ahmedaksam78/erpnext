@@ -14,8 +14,10 @@
   "shipment_date",
   "shipment_driver",
   "traffic_line",
-  "shipments_details_section",
-  "shipments_details"
+  "section_break_8",
+  "customer_shipments",
+  "section_break_10",
+  "sales_invioces"
  ],
  "fields": [
   {
@@ -60,20 +62,29 @@
    "label": "Traffic Line"
   },
   {
-   "fieldname": "shipments_details",
-   "fieldtype": "Table",
-   "label": "Shipments Details",
-   "options": "Shipments Details"
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
   },
   {
-   "fieldname": "shipments_details_section",
-   "fieldtype": "Section Break",
-   "label": "Shipments Orders"
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sales_invioces",
+   "fieldtype": "Table",
+   "label": "Sales Invioces",
+   "options": "Sales Order Items View"
+  },
+  {
+   "fieldname": "customer_shipments",
+   "fieldtype": "Table",
+   "label": "Customer  Shipments",
+   "options": "Shipments Details"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-10-16 14:49:33.229982",
+ "modified": "2022-10-26 11:43:33.534091",
  "modified_by": "Administrator",
  "module": "Shipping And Transportation",
  "name": "External Shipment",
