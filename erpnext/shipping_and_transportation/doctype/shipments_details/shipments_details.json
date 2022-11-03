@@ -9,16 +9,9 @@
   "customer_shipment",
   "sales_invoice",
   "customer_address",
-  "shipping_charges",
   "delivery_date"
  ],
  "fields": [
-  {
-   "fetch_from": "customer_shipment.shipping_charges",
-   "fieldname": "shipping_charges",
-   "fieldtype": "Int",
-   "label": "Shipping charges"
-  },
   {
    "fetch_from": "customer_shipment.shipment_date",
    "fieldname": "delivery_date",
@@ -41,6 +34,7 @@
    "read_only": 1
   },
   {
+   "fetch_from": "customer_shipment.sales_invoice",
    "fieldname": "sales_invoice",
    "fieldtype": "Link",
    "label": "Sales Invoice",
@@ -51,7 +45,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2022-10-26 11:46:00.112152",
+ "modified": "2022-11-02 14:01:03.771100",
  "modified_by": "Administrator",
  "module": "Shipping And Transportation",
  "name": "Shipments Details",

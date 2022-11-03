@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:customer",
+ "autoname": "format: CS-{#####}-{customer}",
  "creation": "2022-10-16 11:23:12.010344",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -10,7 +10,6 @@
   "sales_invoice",
   "shipment_date",
   "customer",
-  "shipping_charges",
   "column_break_4",
   "customer_shipment_status",
   "customer_phone",
@@ -32,8 +31,10 @@
    "reqd": 1
   },
   {
+   "default": "Ready To Ship",
    "fieldname": "customer_shipment_status",
    "fieldtype": "Select",
+   "hidden": 1,
    "label": "Customer Shipment Status",
    "options": "\nReady To Ship\nShipped\nDelivered To Customer\nRejected From Customer"
   },
@@ -62,7 +63,7 @@
    "fieldname": "items",
    "fieldtype": "Table",
    "label": "Items",
-   "options": "Sales Order Items View",
+   "options": "Sales Order Item",
    "read_only": 1
   },
   {
@@ -83,11 +84,6 @@
    "read_only": 1
   },
   {
-   "fieldname": "shipping_charges",
-   "fieldtype": "Currency",
-   "label": "Shipping charges"
-  },
-  {
    "fieldname": "customer_address",
    "fieldtype": "Text",
    "label": "Customer Address",
@@ -97,7 +93,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-10-26 13:18:37.320210",
+ "modified": "2022-11-03 09:38:11.217998",
  "modified_by": "Administrator",
  "module": "Shipping And Transportation",
  "name": "Customer Shipment",

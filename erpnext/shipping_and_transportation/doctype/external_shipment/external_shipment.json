@@ -7,26 +7,20 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "shipment_name",
+  "shipment_date",
   "shipment_car",
   "shipment_status",
   "column_break_4",
-  "shipment_date",
   "shipment_driver",
   "traffic_line",
   "section_break_8",
-  "customer_shipments",
+  "shipments_details",
   "section_break_10",
-  "sales_invioces"
+  "sales_invoice",
+  "section_break_12",
+  "items"
  ],
  "fields": [
-  {
-   "fieldname": "shipment_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": " Shipment Name",
-   "reqd": 1
-  },
   {
    "fieldname": "shipment_car",
    "fieldtype": "Link",
@@ -34,10 +28,11 @@
    "options": "Car"
   },
   {
+   "default": "Draft",
    "fieldname": "shipment_status",
    "fieldtype": "Select",
    "label": "Shipment Status",
-   "options": "\nReady To Ship\nShipped\nDelivered To Customer\nRejected From Customer"
+   "options": "\nDraft\nReady To Ship\nShipped\nDelivered To Customer\nRejected From Customer\nCompleted\nCanceled\nClosed"
   },
   {
    "fieldname": "column_break_4",
@@ -70,21 +65,33 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "sales_invioces",
+   "fieldname": "shipments_details",
    "fieldtype": "Table",
-   "label": "Sales Invioces",
-   "options": "Sales Order Items View"
+   "label": "Shipments Details",
+   "options": "Shipments Details"
   },
   {
-   "fieldname": "customer_shipments",
+   "fieldname": "items",
    "fieldtype": "Table",
-   "label": "Customer  Shipments",
-   "options": "Shipments Details"
+   "label": "Items",
+   "options": "Sales Order Item",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-10-26 11:43:33.534091",
+ "modified": "2022-11-03 11:45:17.500751",
  "modified_by": "Administrator",
  "module": "Shipping And Transportation",
  "name": "External Shipment",
