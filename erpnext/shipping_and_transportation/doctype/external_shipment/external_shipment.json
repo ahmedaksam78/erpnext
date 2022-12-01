@@ -7,16 +7,17 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "sales_invoice",
   "shipment_date",
   "shipment_car",
-  "shipment_status",
   "column_break_4",
   "shipment_driver",
   "traffic_line",
   "section_break_8",
   "shipments_details",
   "section_break_10",
-  "sales_invoice",
+  "shipment_status",
+  "section_break_11",
   "section_break_12",
   "items"
  ],
@@ -30,9 +31,9 @@
   {
    "default": "Draft",
    "fieldname": "shipment_status",
-   "fieldtype": "Select",
+   "fieldtype": "Table",
    "label": "Shipment Status",
-   "options": "\nDraft\nReady To Ship\nShipped\nDelivered To Customer\nRejected From Customer\nCompleted\nCanceled\nClosed"
+   "options": "Shipment Status"
   },
   {
    "fieldname": "column_break_4",
@@ -80,6 +81,7 @@
   {
    "fieldname": "sales_invoice",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Sales Invoice",
    "options": "Sales Invoice",
    "read_only": 1
@@ -87,11 +89,15 @@
   {
    "fieldname": "section_break_12",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-11-03 11:45:17.500751",
+ "modified": "2022-11-30 15:23:55.251843",
  "modified_by": "Administrator",
  "module": "Shipping And Transportation",
  "name": "External Shipment",

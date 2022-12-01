@@ -4,13 +4,14 @@
 
 
 	
-frappe.ui.form.on('Customer Shipment',"sales_invoice" , function(cur_frm,frm) {
+frappe.ui.form.on('Customer Shipment',"sales_invoice" , function(cur_frm) {
 	      
 		 let sales_invoice_name;
 		 sales_invoice_name=(cur_frm.doc.sales_invoice!=null)?cur_frm.doc.sales_invoice:"";
 
 		// frappe call Start
 			console.log (sales_invoice_name)
+		
 			frappe.call({
 	
 				method :'erpnext.api.get_sales_invoice',
@@ -44,6 +45,8 @@ frappe.ui.form.on('Customer Shipment',"sales_invoice" , function(cur_frm,frm) {
 					
 				}
 			});
+		
+
 		 //frappe call End
 		
 	});

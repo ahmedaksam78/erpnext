@@ -11,7 +11,7 @@
   "shipment_date",
   "customer",
   "column_break_4",
-  "customer_shipment_status",
+  "shipment_status",
   "customer_phone",
   "customer_address",
   "section_break_8",
@@ -29,14 +29,6 @@
    "in_list_view": 1,
    "label": "Customer Shipment Date",
    "reqd": 1
-  },
-  {
-   "default": "Ready To Ship",
-   "fieldname": "customer_shipment_status",
-   "fieldtype": "Select",
-   "hidden": 1,
-   "label": "Customer Shipment Status",
-   "options": "\nReady To Ship\nShipped\nDelivered To Customer\nRejected From Customer"
   },
   {
    "fetch_from": "sales_invoice.customer_name",
@@ -88,12 +80,20 @@
    "fieldtype": "Text",
    "label": "Customer Address",
    "read_only": 1
+  },
+  {
+   "default": "Ready To Ship",
+   "fieldname": "shipment_status",
+   "fieldtype": "Select",
+   "label": " Shipment Status",
+   "options": "\nReady To Ship\nShipped\nDelivered To Customer\nRejected From Customer\nCompleted\nCanceled",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-11-03 09:38:11.217998",
+ "modified": "2022-11-30 13:58:50.904480",
  "modified_by": "Administrator",
  "module": "Shipping And Transportation",
  "name": "Customer Shipment",
