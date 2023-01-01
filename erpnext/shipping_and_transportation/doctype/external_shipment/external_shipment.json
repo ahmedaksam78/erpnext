@@ -9,9 +9,10 @@
  "field_order": [
   "sales_invoice",
   "shipment_date",
-  "shipment_car",
-  "column_break_4",
   "shipment_driver",
+  "driver_name",
+  "column_break_4",
+  "shipment_car",
   "traffic_line",
   "section_break_8",
   "shipments_details",
@@ -25,6 +26,7 @@
   {
    "fieldname": "shipment_car",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Shipment Car",
    "options": "Car"
   },
@@ -93,11 +95,19 @@
   {
    "fieldname": "section_break_11",
    "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "shipment_driver.full_name",
+   "fieldname": "driver_name",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Driver Name",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-11-30 15:23:55.251843",
+ "modified": "2022-12-20 10:59:40.949851",
  "modified_by": "Administrator",
  "module": "Shipping And Transportation",
  "name": "External Shipment",
@@ -114,8 +124,23 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
   }
  ],
  "sort_field": "modified",
- "sort_order": "DESC"
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

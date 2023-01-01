@@ -14,8 +14,13 @@ app_logo_url = "/assets/erpnext/images/erpnext-logo.svg"
 
 develop_version = "13.x.x-develop"
 
+# These hooks allow you to inject JS / CSS in desk.html which renders the Desk.
+# injected in desk.html
 app_include_js = "/assets/js/erpnext.min.js"
 app_include_css = "/assets/css/erpnext.css"
+
+# These hooks allow you to inject JS / CSS in web.html which renders the Portal.
+# injected in the web.html
 web_include_js = "/assets/js/erpnext-web.min.js"
 web_include_css = "/assets/css/erpnext-web.css"
 
@@ -29,6 +34,9 @@ doctype_js = {
 	# "Customer Shipment": "shipping_and_transportation/doctype/customer_shipment/customer_shipment.js",
 }
 
+#these hooks allow you to inject JS assets in Standard Desk Pages.
+#page_js = {"page_name" : "public/js/file.js"}
+
 override_doctype_class = {"Address": "erpnext.accounts.custom.address.ERPNextAddress"}
 
 welcome_email = "erpnext.setup.utils.welcome_email"
@@ -38,15 +46,17 @@ setup_wizard_requires = "assets/erpnext/js/setup_wizard.js"
 setup_wizard_stages = "erpnext.setup.setup_wizard.setup_wizard.get_setup_stages"
 setup_wizard_test = "erpnext.setup.setup_wizard.test_setup_wizard.run_setup_wizard_test"
 
+# python module path
 before_install = "erpnext.setup.install.check_setup_wizard_not_completed"
 after_install = "erpnext.setup.install.after_install"
+after_sync = "app.setup.install.after_sync"
 
 boot_session = "erpnext.startup.boot.boot_session"
 notification_config = "erpnext.startup.notifications.get_notification_config"
 get_help_messages = "erpnext.utilities.activation.get_help_messages"
 leaderboards = "erpnext.startup.leaderboard.get_leaderboards"
 filters_config = "erpnext.startup.filters.get_filters_config"
-additional_print_settings = "erpnext.controllers.print_settings.get_print_settings"
+additional_print_settings = "erpwebsite_contextnext.controllers.print_settings.get_print_settings"
 
 on_session_creation = [
 	"erpnext.portal.utils.create_customer_or_supplier",
@@ -104,6 +114,7 @@ website_generators = [
 	"Student Admission",
 ]
 
+# When a Portal Page is rendered, a dictionary is built with all of the possible variables that the page might need to render. This dict is also known as context. You can use these hooks to add or modify values in this dict.
 website_context = {
 	"favicon": "/assets/erpnext/images/erpnext-favicon.svg",
 	"splash_image": "/assets/erpnext/images/erpnext-logo.svg",
@@ -316,6 +327,9 @@ sounds = [
 	{"name": "incoming-call", "src": "/assets/erpnext/sounds/incoming-call.mp3", "volume": 0.2},
 	{"name": "call-disconnect", "src": "/assets/erpnext/sounds/call-disconnect.mp3", "volume": 0.2},
 ]
+# You can play your added sound using the client utility method:
+#frappe.utils.play_sound("ping")
+
 
 has_upload_permission = {"Employee": "erpnext.hr.doctype.employee.employee.has_upload_permission"}
 

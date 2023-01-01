@@ -18,7 +18,7 @@ from .default_success_action import get_default_success_action
 default_mail_footer = """<div style="padding: 7px; text-align: right; color: #888"><small>Sent via
 	<a style="color: #888" href="http://erpnext.org">ERPNext</a></div>"""
 
-
+# will run after app is installed on site
 def after_install():
 	frappe.get_doc({"doctype": "Role", "role_name": "Analytics"}).insert()
 	set_single_defaults()
@@ -35,7 +35,7 @@ def after_install():
 	add_non_standard_user_types()
 	frappe.db.commit()
 
-
+# will run before app is installed on site
 def check_setup_wizard_not_completed():
 	if cint(frappe.db.get_single_value("System Settings", "setup_complete") or 0):
 		message = """ERPNext can only be installed on a fresh site where the setup wizard is not completed.
