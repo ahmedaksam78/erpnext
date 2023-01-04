@@ -37,6 +37,8 @@ doctype_js = {
 #these hooks allow you to inject JS assets in Standard Desk Pages.
 #page_js = {"page_name" : "public/js/file.js"}
 
+braintree_success_page = "app.integrations.braintree_success_page"
+
 override_doctype_class = {"Address": "erpnext.accounts.custom.address.ERPNextAddress"}
 
 welcome_email = "erpnext.setup.utils.welcome_email"
@@ -81,6 +83,9 @@ update_website_context = [
 	"erpnext.e_commerce.shopping_cart.utils.update_website_context",
 	"erpnext.education.doctype.education_settings.education_settings.update_website_context",
 ]
+
+
+
 my_account_context = "erpnext.e_commerce.shopping_cart.utils.update_my_account_context"
 webform_list_context = "erpnext.controllers.website_list_for_contact.get_webform_list_context"
 
@@ -91,6 +96,7 @@ calendars = [
 	"Sales Order",
 	"Holiday List",
 	"Course Schedule",
+    "Appointment"
 ]
 
 domains = {
@@ -212,14 +218,30 @@ website_route_rules = [
 	{"from_route": "/project", "to_route": "Project"},
 ]
 
+get_website_user_home_page = "app.website.get_home_page"
+
 standard_portal_menu_items = [
+    {
+		"title": _("Dashboard"),
+		"route": "/dashboard",
+		"role": "Adminstrator"
+    },
+    {
+        "title": _("Orderss"),
+        "route": "/orders",
+        "role": "Adminstrator"
+
+    },
+
 	{
 		"title": _("Personal Details"),
 		"route": "/personal-details",
 		"reference_doctype": "Patient",
 		"role": "Patient",
 	},
-	{"title": _("Projects"), "route": "/project", "reference_doctype": "Project"},
+	{   "title": _("Projects"),
+        "route": "/project",
+        "reference_doctype": "Project"},
 	{
 		"title": _("Request for Quotations"),
 		"route": "/rfq",
@@ -471,6 +493,9 @@ after_migrate = ["erpnext.setup.install.update_select_perm_after_install"]
 
 scheduler_events = {
 	"cron": {
+		"* * * * *": [
+            "erpnext.tasks.cron"
+        ],
 		"0/5 * * * *": [
 			"erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs",
 		],
@@ -486,13 +511,16 @@ scheduler_events = {
 			"erpnext.stock.reorder_item.reorder_item",
 		],
 	},
+
 	"all": [
+
 		"erpnext.projects.doctype.project.project.project_status_update_reminder",
 		"erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder",
 		"erpnext.hr.doctype.interview.interview.send_interview_reminder",
 		"erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts",
 	],
 	"hourly": [
+
 		"erpnext.hr.doctype.daily_work_summary_group.daily_work_summary_group.trigger_emails",
 		"erpnext.erpnext_integrations.doctype.amazon_mws_settings.amazon_mws_settings.schedule_get_order_details",
 		"erpnext.erpnext_integrations.doctype.plaid_settings.plaid_settings.automatic_synchronization",
@@ -559,7 +587,7 @@ default_mail_footer = """
 	<span>
 		Sent via
 		<a class="text-muted" href="https://erpnext.com?source=via_email_footer" target="_blank">
-			ERPNext
+			Sampa Rattan
 		</a>
 	</span>
 """
@@ -822,3 +850,9 @@ global_search_doctypes = {
 additional_timeline_content = {
 	"*": ["erpnext.telephony.doctype.call_log.call_log.get_linked_call_logs"]
 }
+
+
+fixtures = [
+	"Catalog Member",
+ 
+]

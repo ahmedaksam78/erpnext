@@ -1,0 +1,44 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Catalog Member",
+  "email_address": "homzmart@homzmzrt.com",
+  "first_name": "Homzmart",
+  "full_name": "Homzmart  Catalog Member",
+  "last_name": " Catalog Member",
+  "modified": "2022-09-20 16:49:21.940767",
+  "name": "CM0000001",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "phone": "01023456789"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Catalog Member",
+  "email_address": "amazom@amazom.com",
+  "first_name": "Amazom",
+  "full_name": "Amazom Catalog Member",
+  "last_name": "Catalog Member",
+  "modified": "2022-09-20 16:52:25.706134",
+  "name": "CM0000002",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "phone": "01123456789"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Catalog Member",
+  "email_address": "noon@noon.com",
+  "first_name": "Noon",
+  "full_name": "Noon Catalog Member",
+  "last_name": "Catalog Member",
+  "modified": "2022-09-20 16:50:48.075659",
+  "name": "CM0000003",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "phone": "01123456789"
+ }
+]
