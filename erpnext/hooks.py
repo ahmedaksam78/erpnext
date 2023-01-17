@@ -39,7 +39,11 @@ doctype_js = {
 
 braintree_success_page = "app.integrations.braintree_success_page"
 
-override_doctype_class = {"Address": "erpnext.accounts.custom.address.ERPNextAddress"}
+override_doctype_class = {
+    "Address": "erpnext.accounts.custom.address.ERPNextAddress",
+    "Student": "erpnext.overrides.AhmedStudent"
+    
+    }
 
 welcome_email = "erpnext.setup.utils.welcome_email"
 
@@ -482,6 +486,11 @@ doc_events = {
 	"Integration Request": {
 		"validate": "erpnext.accounts.doctype.payment_request.payment_request.validate_payment"
 	},
+ 
+	 "Catalog Member":{
+		 "validate": "erpnext.catalog_management.doctype.catalog_member.events.send_sms"
+	 }
+ 
 }
 
 # On cancel event Payment Entry will be exempted and all linked submittable doctype will get cancelled.
@@ -493,7 +502,7 @@ after_migrate = ["erpnext.setup.install.update_select_perm_after_install"]
 
 scheduler_events = {
 	"cron": {
-		"* * * * *": [
+		"* * * * fri": [
             "erpnext.tasks.cron"
         ],
 		"0/5 * * * *": [
@@ -851,8 +860,11 @@ additional_timeline_content = {
 	"*": ["erpnext.telephony.doctype.call_log.call_log.get_linked_call_logs"]
 }
 
-
+# create json file that have the all data of doctype that we want
+#use comond  in frappe-bench path
+# bench export-fixtures
 fixtures = [
 	"Catalog Member",
- 
+    "Item",
+
 ]

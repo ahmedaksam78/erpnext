@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-01-05 11:52:01.861352",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "catalog_name",
+  "catalog_status",
+  "column_break_3",
+  "catalog_id",
+  "relation"
+ ],
+ "fields": [
+  {
+   "fieldname": "catalog_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Catalog Name",
+   "options": "Catalog",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "catalog_status",
+   "fieldtype": "Data",
+   "label": "Catalog Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "catalog_id",
+   "fieldtype": "Data",
+   "label": "Catalog Id",
+   "read_only": 1
+  },
+  {
+   "default": "No Relation",
+   "fieldname": "relation",
+   "fieldtype": "Select",
+   "label": "Relation",
+   "options": "\nOuter\nInner\nNo Relation"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-01-11 11:39:50.615401",
+ "modified_by": "Administrator",
+ "module": "Catalog Management",
+ "name": "Catalog Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

@@ -1,6 +1,7 @@
 import frappe
 import string
 import random
+from frappe.utils import now
 def all():
     pass
 def cron():
@@ -11,6 +12,8 @@ def cron():
 
     new_note  = frappe.get_doc({"doctype" : "Note",
     "title" : note,
+    "time": now(),
+
     })
 
     new_note.insert()

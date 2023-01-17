@@ -6,9 +6,9 @@ frappe.ui.form.on("External Shipment",{
 		
 
 		
-		//  //cannot able to add rows
+		  //cannot able to add rows
 		  frm.set_df_property("shipment_status", "cannot_add_rows", true);
-		// //cannot able to delete rows
+		 //cannot able to delete rows
 		 frm.set_df_property("shipment_status", "cannot_delete_rows", true);
 
 		 
@@ -88,7 +88,16 @@ frappe.ui.form.on("Shipments Details",{
 
 
 
-
+// var tbl = doc.child_table || [];
+// var i = tbl.length;
+// while (i--)
+// {
+//     if(tbl[i].field_name == '')
+//     {
+//         cur_frm.get_field("child_table").grid.grid_rows[i].remove();
+//     }
+// }
+// cur_frm.refresh();
 
 
 
